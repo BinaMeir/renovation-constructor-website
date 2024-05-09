@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Quicksand', sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  margin: 0 0 10px;
+}
+
+p {
+  margin: 0 0 10px;
+}
+
+.images img {
+    max-width: 50%; /* Adjust to the maximum width you want the image to occupy */
+    max-height: 50%; /* Adjust to the maximum height you want the image to occupy */
+    width: auto; /* Ensures the image retains its aspect ratio */
+    height: auto; /* Ensures the image retains its aspect ratio */
+}
