@@ -4,7 +4,7 @@ const About = () => {
     const [myImage, setMyImage] = useState(null);
 
     useEffect(() => {
-        const fetchImage = async () => {
+        const fetchImage = async () => {//is that needed??? i can't just desplay the image??
             try {
                 const response = await fetch('/michael.jpg');
                 if (!response.ok) {

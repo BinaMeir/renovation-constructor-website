@@ -2,6 +2,7 @@ import { useEffect, useState, useCallback } from 'react';
 import axios from 'axios';
 import serverConfig from './serverConfig';
 import Images from './Images';
+import './Gallery.css'; // Ensure you have this file for custom CSS
 
 const Gallery = () => {
   const [images, setImages] = useState(null);
@@ -11,7 +12,6 @@ const Gallery = () => {
 
   const fetchImages = useCallback(async () => {
     try {
-      console.log("here again!");
       setLoading(true);
       const [kitchenResponse, bathroomResponse, livingRoomResponse] = await Promise.all([
         axios.get(`${serverConfig.SERVER_URL}/images/kitchen`),
@@ -34,11 +34,10 @@ const Gallery = () => {
   }, []);
 
   useEffect(() => {
-    if (!images) { // Check if images have already been fetched
-      console.log("images = null");
+    if (!images) {
       fetchImages();
     }
-  }, []);
+  }, [images, fetchImages]);
 
   if (loading) {
     return <div>Loading...</div>;
@@ -52,22 +51,32 @@ const Gallery = () => {
     setSelectedCategory(chosenCategory);
   };
 
+  const categories = [
+    { name: 'kitchen', displayName: 'Kitchen' },
+    { name: 'bathroom', displayName: 'Bathroom' },
+    { name: 'livingRoom', displayName: 'Living Room' }
+  ];
+
   return (
     <div className="gallery">
-      <h2>Welcome to the gallery!</h2>
+      <h2>Welcome to the Gallery!</h2>
       {!selectedCategory ? (
-        <div>
-          <button onClick={() => handleCategorySelect('kitchen')}>Kitchen</button>
-          <button onClick={() => handleCategorySelect('bathroom')}>Bathroom</button>
-          <button onClick={() => handleCategorySelect('livingRoom')}>Living-room</button>
-          {/* Add more buttons for other categories */}
+        <div className="category-selection">
+          {categories.map((category) => (
+            <div key={category.name} className="category-card" onClick={() => handleCategorySelect(category.name)}>
+              <div className="category-image-wrapper">
+                <img src={`/${category.name}.jpg`} alt={`${category.displayName}`} className="category-image" />
+                <div className="category-overlay">
+                  <span className="category-title">{category.displayName}</span>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       ) : (
-        <div>
-          {/* Display images of the selected category */}
+        <div className="image-display">
           <Images imageList={images[selectedCategory]} />
-          {/* Button to go back and choose another category */}
-          <button onClick={() => setSelectedCategory(null)}>Go back</button>
+          <button className="back-button" onClick={() => setSelectedCategory(null)}>Go Back</button>
         </div>
       )}
     </div>
