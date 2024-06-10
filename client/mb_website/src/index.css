@@ -4,7 +4,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow: hidden;
 }
 
 html, body {
@@ -22,11 +21,4 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   margin: 0 0 10px;
-}
-
-.images img {
-    max-width: 50%; /* Adjust to the maximum width you want the image to occupy */
-    max-height: 50%; /* Adjust to the maximum height you want the image to occupy */
-    width: auto; /* Ensures the image retains its aspect ratio */
-    height: auto; /* Ensures the image retains its aspect ratio */
 }

@@ -67,7 +67,7 @@
 
 .contact-component-container {
     position: absolute;
-    bottom: 90px; /* Adjust this value to move the contact component up or down */
+    bottom: 30px; /* Adjust this value to move the contact component up or down */
     left: 50%;
     transform: translateX(-50%);
     z-index: 2;

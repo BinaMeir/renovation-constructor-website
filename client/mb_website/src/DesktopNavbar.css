@@ -1,0 +1,64 @@
+/* DesktopNavbar.css */
+
+/* Existing styles */
+
+.desktop-navbar {
+    padding: 10px 20px;
+    background-color: #333;
+  }
+  
+  .left-links {
+    display: flex;
+    align-items: center;
+  }
+  
+  .left-links .nav-link {
+    color: white !important;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  
+  .left-links .nav-link:hover {
+    color: #ddd !important;
+  }
+  
+  .center-links .nav-link, .dropdown-item {
+    color: white !important;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  
+  .center-links .nav-link:hover, .dropdown-item:hover {
+    color: #ddd !important;
+  }
+  
+  .custom-brand img{
+    height: 40px;
+    width: auto;
+  }
+  
+  /* Custom styles for the dropdown */
+  .custom-dropdown .dropdown-menu {
+    background-color: #444; /* Background color */
+  }
+  
+  .custom-dropdown .dropdown-item {
+    color: white !important; /* Text color */
+    text-align: center;
+  }
+  
+  .custom-dropdown .dropdown-item:hover {
+    background-color: #555; /* Hover background color */
+    color: #ddd !important; /* Hover text color */
+  }
+  
+
+  .desktop-navbar .left-links .fa-whatsapp {
+    color: #25D366; /* WhatsApp green color */
+    font-size: 24px; /* Adjust the size as needed */
+}
+
+.desktop-navbar .left-links .fa-phone {
+    color: #25D366; /* WhatsApp green color */
+    font-size: 24px; /* Adjust the size as needed */
+}
