@@ -31,9 +31,10 @@ const DesktopNavbar = () => {
         <Nav className="center-links">
           <Nav.Link href="/gallery">גלריה</Nav.Link>
           <Nav.Link href="/recommendations">המלצות</Nav.Link>
-          <NavDropdown title="שיפוץ דירה" id="basic-nav-dropdown" className="custom-dropdown">
-            <NavDropdown.Item href="#">מטבחים</NavDropdown.Item>
-            <NavDropdown.Item href="#">חדרי אמבטיה</NavDropdown.Item>
+          <NavDropdown title="שיפוץ כללי" id="basic-nav-dropdown" className="custom-dropdown">
+            <NavDropdown.Item href="/house-rennovation/">שיפוץ דירה</NavDropdown.Item>
+            <NavDropdown.Item href="/house-rennovation#kitchen">מטבחים</NavDropdown.Item>
+            <NavDropdown.Item href="/house-rennovation#bathroom">חדרי אמבטיה</NavDropdown.Item>
             <NavDropdown.Item href="#">סלון</NavDropdown.Item>
           </NavDropdown>
           <Nav.Link href="/about">אודות</Nav.Link>

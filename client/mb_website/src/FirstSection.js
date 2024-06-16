@@ -10,8 +10,8 @@ const FirstSection = () => {
     return (
         <header className="first-section">
             <div className="first-section-content">
-                <h1>Transforming Homes with Excellence</h1>
-                <p>Specializing in Kitchen, Bathroom, and Whole House Renovations</p>
+                <h1>מיכאל שיפוצניק</h1>
+                <p>קבלן קטן נזק גדול</p>
             </div>
             {isMobile ? (
                 <div className="contact-button-container">

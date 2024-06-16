@@ -8,6 +8,8 @@ import { useMediaQuery } from 'react-responsive';
 import DesktopNavbar from './DesktopNavbar';
 import MobileNavbar from './MobileNavbar';
 import IsMobile from './IsMobile';
+import HouseArticle from './HouseArticle';
+import Footer from './Footer';
 
 function App() {
   const isMobile = IsMobile();
@@ -25,9 +27,10 @@ function App() {
             <Route path="/recommendations" element={<Recommendations />} />
             <Route path="/about"  element={<About />} />
             <Route path="/contact" element={<Contact />} />
-            {/* <Route path="/house-rennovation" element={<HouseArticle />} /> */}
+            <Route path="/house-rennovation" element={<HouseArticle />} />
           </Routes>
         </div>
+        <div className="footer"><Footer /></div>
       </div>
     </Router>
   );
